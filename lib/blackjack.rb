@@ -32,16 +32,15 @@ end
 def hit?(current_total)
   prompt_user
   input = get_user_input
+  while input != "s" || "h"
+    invalid_command
+    prompt_user
+    input = get_user_input
+  end
     if input == "s"
       return current_total
-    elsif input == "h"
-      return deal_card + current_total
     else
-      while input != "s" || != "h"
-        prompt_user
-        input = get_user_input
-    end
-    return deal_card + current_total
+      current_total += deal_card
 end
 
 def invalid_command
