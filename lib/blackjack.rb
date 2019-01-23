@@ -27,6 +27,7 @@ def initial_round
   second_card = deal_card
   sum_init_round = first_card + second_card
   display_card_total(sum_init_round)
+  return sum_init_round
 end
 
 def hit?(current_total)
@@ -53,4 +54,6 @@ end
 
 def runner
   welcome
+  initial_round
+  hit?()
 end
