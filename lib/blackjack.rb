@@ -38,7 +38,7 @@ def hit?(current_total)
       return deal_card + current_total
     else
       invalid_command
-      hit?
+      input
     end
 end
 
